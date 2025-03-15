@@ -22,7 +22,7 @@ function M.scroll_regions(top, bottom)
     return "\27[" .. tostring(top) .. ";" .. tostring(bottom) .. "r"
 end
 
--- Sets the scroll region and writes it to the terminal.
+-- Sets the scroll region and writes it to the terminal
 function M.scroll_region(top, bottom)
     output.write(M.scroll_regions(top, bottom))
     return true

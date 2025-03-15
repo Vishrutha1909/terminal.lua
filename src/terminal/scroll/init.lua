@@ -18,7 +18,7 @@ function M.scroll_regions(top, bottom)
   return "\27[" .. tostring(top) .. ";" .. tostring(bottom) .. "r"
 end
 
---- Sets the scroll region and writes the ANSI sequence to the terminal.
+-- Sets the scroll region and writes the ANSI sequence to the terminal.
 -- @tparam number top The top margin of the scroll region.
 -- @tparam number bottom The bottom margin of the scroll region.
 -- @treturn true Always returns true after setting the scroll region.
@@ -27,7 +27,7 @@ function M.scroll_region(top, bottom)
   return true
 end
 
---- Creates an ANSI sequence to scroll up by a specified number of lines.
+-- Creates an ANSI sequence to scroll up by a specified number of lines.
 -- @tparam[opt=1] number n The number of lines to scroll up.
 -- @treturn string The ANSI sequence for scrolling up.
 function M.scroll_ups(n)
