@@ -1,4 +1,3 @@
--- spec/scroll_spec.lua
 local scroll = require "terminal.scroll"
 
 describe("Scroll Module Tests", function()

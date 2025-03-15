@@ -1,4 +1,3 @@
--- spec/clear_spec.lua
 local clear = require "terminal.clear"
 
 describe("Clear Module Tests", function()
