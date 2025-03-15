@@ -30,15 +30,19 @@ end
 
 local sys = require "system"
 -- load submodules
-local input = require "terminal.input"
-local output = require "terminal.output"
-local clear = require "terminal.clear"
-local scroll = require "terminal.scroll"
+local sys = require "system"
+package.loaded["terminal"] = M
 
-M.input = input
-M.output = output
-M.clear = clear
-M.scroll = scroll
+M.input = require("terminal.input")
+M.output = require("terminal.output")
+M.clear = require("terminal.clear")
+M.scroll = require("terminal.scroll")
+
+-- create locals
+local output = M.output
+local input = M.input
+local clear = M.clear
+local scroll = M.scroll
 
 local t -- the terminal/stream to operate on, default io.stderr
 local bsleep  -- a blocking sleep function
